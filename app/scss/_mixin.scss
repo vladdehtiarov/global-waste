@@ -1,0 +1,57 @@
+@mixin retina($range) {
+    @if $range == 1.5x {
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        @content;
+      }
+    } @else if $range == 2x {
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        @content;
+      }
+    } @else if $range == 3x {
+      @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+        @content;
+      }
+    }
+}
+
+@mixin responsive($range) {
+  @if $range == desktop {
+    @media (min-width: 720px) {
+      @content;
+    }
+  } @else if $range == mobile {
+    @media (max-width: 425px) {
+      @content;
+    }
+  }   
+}
+
+@mixin imgToCeneter($width, $height) {
+  position: relative;
+  width: $width;
+  height: $height;
+  overflow: hidden;
+  @content;
+
+  img {
+    width: $width;
+    height: $height;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+}
+
+@mixin flex($direction) {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: $direction;
+  justify-content: space-between;
+  align-items: center;
+  @content;
+}
+
+
+

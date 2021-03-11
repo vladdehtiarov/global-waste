@@ -1,0 +1,13 @@
+// Header styles
+
+// Import menu styles
+@import "menu";
+
+.header {
+    width: 100%;
+    padding: 2.552vw 0;
+    
+    @include responsive(mobile) {
+        padding: 6.588vw 0;
+    }
+}

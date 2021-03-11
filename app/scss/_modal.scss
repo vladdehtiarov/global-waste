@@ -1,0 +1,259 @@
+// Modal window styels
+
+.owerlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal {
+    width: 38.750vw;
+    padding-top: 8.906vw;
+    padding-bottom: 5.469vw;
+    border-radius: 0.781vw;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1500;
+
+    @include responsive(mobile) {
+        width: 90%;
+        height: 70%;
+        border-radius: 3.529vw;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    &--inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+
+        @include responsive(mobile) {
+            justify-content: center;
+        }
+
+        &__thanks {
+            margin-top: 5.469vw;
+
+            @include responsive(mobile) {
+                margin-top: 11.765vw;
+            }
+        }
+    }
+
+    &--close {
+        position: absolute;
+        top: 1.250vw;
+        right: 1.667vw;
+
+        @include responsive(mobile) {
+            top: 4.235vw;
+            right: 3.765vw;
+        }
+
+        img {
+            width: 1.198vw;
+            cursor: pointer;
+
+            @include responsive(mobile) {
+                width: 4.706vw;
+            }
+        }
+    }
+
+    .id-block {
+        &--title {
+            text-align: center;
+            font-weight: 400;
+            font-size: 1.510vw;
+            line-height: 1.771vw;
+            color: #000000;
+
+            @include responsive(mobile) {
+                font-size: 5.176vw;
+                line-height: 1.2;
+            }
+        }
+
+        &--id {
+            text-align: center;
+            font-weight: 900;
+            font-size: 2.083vw;
+            line-height: 2.396vw;
+            color: #3EC072;
+
+            @include responsive(mobile) {
+                font-size: 8vw;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    .thanks {
+        &--title {
+            font-weight: 700;
+            font-size: 1.198vw;
+            line-height: 1.406vw;
+            text-align: center;
+            text-transform: uppercase;
+            color: #464646;
+
+            @include responsive(mobile) {
+                font-size: 2.824vw;
+                line-height: 1.2;
+            }
+        }
+
+        &--sutitle {
+            font-weight: 700;
+            font-size: 1.042vw;
+            line-height: 1.198vw;
+            text-align: center;
+            text-transform: uppercase;
+            color: #474747;
+
+            @include responsive(mobile) {
+                font-size: 2.353vw;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    .send-modal {
+        margin-top: 5.990vw;
+        width: 8.906vw;
+        height: 2.396vw;
+        left: 45.729vw;
+        top: 46.510vw;
+        background: #3EC072;
+        box-shadow: 0px 0.521vw 2.604vw rgba(140, 212, 112, 0.5);
+        border-radius: 0.365vw;
+        border: none;
+        outline: none;
+
+        font-family: $fonts;
+        font-weight: 700;
+        font-size: 1.042vw;
+        line-height: 1.198vw;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-shadow: 0px 0px 0.182vw rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+
+        @include responsive(mobile) {
+            margin-top: 6.588vw;
+            width: 28.235vw;
+            height: 7.529vw;
+            border-radius: 1.412vw;
+            font-size: 3.294vw;
+            line-height: 1.2;
+        }
+    }
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    label:nth-child(2) {
+        margin-top: 3.021vw;
+
+        @include responsive(mobile) {
+            margin-top: 8vw;
+        }
+    }   
+
+    &--input {
+        width: 25.677vw;
+        height: 3.594vw;
+        padding: 0 1.823vw;
+        border-radius: 0.417vw;
+        border: 0.052vw solid #3EC072;
+        outline: none;
+        
+        @include responsive(mobile) {
+            width: 70.588vw;
+            height: 11.765vw;
+            border-radius: 1.412vw;
+            border: 0.235vw solid #3EC072;
+            padding: 0 4.235vw;
+        }
+
+        &, &::placeholder {
+            font-family: $fonts;
+            font-weight: 300;
+            font-size: 1.198vw;
+            line-height: 1.406vw;
+            color: #AFAFAF;
+
+            @include responsive(mobile) {
+                font-size: 3.765vw;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    .input-label {
+        margin-bottom: 0.885vw;
+        font-weight: 700;
+        font-size: 1.198vw;
+        line-height: 1.406vw;
+        color: #000000;
+
+        @include responsive(mobile) {
+            margin-bottom: 1.882vw;
+            font-size: 3.294vw;
+            line-height: 1.2;
+        }
+    }
+
+    .send-form {
+        margin-top: 5.625vw;
+        width: 8.854vw;
+        height: 2.396vw;
+        background: #3EC072;
+        box-shadow: 0px 0.521vw 2.604vw rgba(140, 212, 112, 0.5);
+        border-radius: 0.365vw;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        font-family: $fonts;
+        font-weight: 700;
+        font-size: 1.042vw;
+        line-height: 1.198vw;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-shadow: 0px 0px 0.182vw rgba(0, 0, 0, 0.25);
+
+        @include responsive(mobile) {
+            margin-top: 8.941vw;
+            width: 28.235vw;
+            height: 7.529vw;
+            border-radius: 1.412vw;
+            font-size: 3.294vw;
+            line-height: 1.2;
+        }
+    }
+
+}
+
+.hide {
+    display: none;
+}

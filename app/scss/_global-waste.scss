@@ -1,0 +1,128 @@
+// Global waste section styles
+// Import label styles
+@import "section-label";
+
+.global-waste {
+    width: 100%;
+    padding-bottom: 2.448vw;
+
+    &--btn-wrapp {
+        width: 20.625vw;
+        margin: 0 auto;
+        margin-top: 5.573vw;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        @include responsive(mobile) {
+            width: 64.941vw;
+            margin-top: 8.941vw;
+            justify-content: center;
+        }
+    }
+
+    &--btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-title {
+        display: block;
+        font-weight: 700;
+        font-size: 1.042vw;
+        line-height: 1.042vw;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include responsive(mobile) {
+            font-size: 3.765vw;
+            line-height: 1.2;
+        }
+    }
+
+    .btn-subtitle {
+        display: block;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    #id-btn {
+        width: 8.906vw;
+        height: 2.396vw;
+        border-radius: 0.365vw;
+        background-color: #3EC072; 
+
+        @include responsive(mobile) {
+            width: 40vw;
+            height: 10.824vw;
+            border-radius: 1.412vw;
+        }
+
+        .btn-title { 
+            color: #fff;
+            text-shadow: 0px 0px 0.182vw rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-subtitle {
+            font-size: 0.677vw;
+            line-height: 0.781vw;
+            color: rgba(255, 255, 255, 0.7);
+            text-shadow: 0px 0px 0.104vw rgba(0, 0, 0, 0.25);
+
+            @include responsive(mobile) {
+                font-size: 2.353vw;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    #id-coordinates {
+        width: 10.521vw;
+        height: 2.135vw;
+        color: #6D6D6D;
+
+        @include responsive(mobile) {
+            margin-top: 4.706vw;
+            width: 46.824vw;
+            height: 10.824vw;
+        }
+
+        .btn-subtitle {
+            font-size: 0.781vw;
+            line-height: 0.938vw;
+
+            @include responsive(mobile) {
+                font-size: 2.353vw;
+                line-height: 1.2;
+            }
+        }
+    }
+}
+
+.map {
+    margin: 0 auto;
+    margin-top: 3.854vw;
+    width: 80.156vw;
+    height: 39.688vw;
+    overflow: hidden;
+    position: relative;
+
+    @include responsive(mobile) {
+        margin-top: 6.588vw;
+    }
+
+    img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

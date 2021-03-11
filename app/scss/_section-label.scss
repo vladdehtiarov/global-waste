@@ -1,0 +1,31 @@
+// Section label styles
+.section-label {
+    margin-top: 3.490vw;
+    text-align: center;
+
+    @include responsive(mobile) {
+        margin-top: 50px;
+    }
+    
+    .title {
+        font-weight: 900;
+        font-size: 3.125vw;
+        line-height: 3.646vw;
+        text-transform: uppercase;
+
+        @include responsive(mobile) {
+            font-size: 9.412vw;
+            line-height: 1.2;
+        }
+    }
+
+    .subitle {
+        font-size: 1.302vw;
+        line-height: 1.510vw;
+        
+        @include responsive(mobile) {
+            font-size: 3.294vw;
+            line-height: 2.5;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+// Menu styles
+.menu {
+    width: 100%;
+    max-width: 19.792vw;
+
+    @include responsive(mobile) {
+        max-width: 100%;
+    }
+
+    &--wrapper {
+        width: inherit;
+    }
+
+    &--list {
+        width: inherit;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &--link {
+        font-weight: 700;
+        font-size: 1.198vw;
+        line-height: 1.406vw;
+        text-transform: uppercase;
+        color: #404040;
+
+        @include responsive(mobile) {
+            font-size: 3.765vw;
+            line-height: 1;
+        }
+    }
+}

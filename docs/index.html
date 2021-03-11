@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Waste</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="menu">
+                <nav class="menu--wrapper">
+                    <ul class="menu--list">
+                        <li class="menu--item"><a href="#" class="menu--link">About</a></li>
+                        <li class="menu--item"><a href="#" class="menu--link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="global-waste">
+            <div class="section-label">
+                <h1 class="title">
+                    Global waste collection organisation
+                </h1>
+                <p class="subitle">
+                    Headquarters Netherland,  address ... st...
+                </p>
+            </div>
+
+            <div class="global-waste--btn-wrapp">
+                <a href="#" class="global-waste--btn" id="id-btn">
+                    <span class="btn-title">enter with id</span>
+                    <span class="btn-subtitle">phone number</span>
+                </a>
+                <a href="#" class="global-waste--btn" id="id-coordinates">
+                    <span class="btn-title">Enter coordinates</span>
+                    <span class="btn-subtitle">and phone number</span>
+                </a>
+            </div>
+            
+            <div class="map">
+                <img src="images/map.svg" alt="map">
+            </div>
+        </section>
+    </main>
+
+    <div class="owerlay hide"></div>
+    <div class="modal hide">
+        <form class="form">
+            <label>
+                <p class="input-label">Enter coordinates using Google Maps application</p>
+                <input class="form--input" id="input-coordinate" type="text" placeholder="example: 50.4292760, 30.5492315">
+            </label>
+            <label>
+                <p class="input-label">Enter phone number</p>
+                <input class="form--input" id="input-phone" type="text" placeholder="+000000000000">
+            </label>
+            <button class="send-form">submit</button>
+        </form>
+        <div class="modal--inner hide">
+            <a class="modal--close">
+                <img src="images/cancel.svg" alt="x">
+            </a>
+            <div class="modal--inner__id-block">
+                <h2 class="id-block--title">YOUR ID</h2>
+                <span class="id-block--id" id="id">+00000 000 00 00</span>
+            </div>
+            <div class="modal--inner__thanks">
+                <h3 class="thanks--title">Thank you</h3>
+                <p class="thanks--sutitle">
+                    soon you will receive an invitation for take a part in an action.
+                </p>
+            </div>
+            <button class="send-modal">enter with id</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>
