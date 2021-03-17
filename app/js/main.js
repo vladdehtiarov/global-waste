@@ -1,21 +1,6 @@
-// Mask
-const coordinate = document.getElementById('input-coordinate');
-const phone = document.getElementById('input-phone');
-
-// Mask for coordinate input
-const coordinateMask = {
-    mask: '00.0000000, 00.0000000'
-};
-
-// Msak for phone input
-const phoneMask = {
-    mask: '+00000 000 00 00'
-};
-
-const maskCoordinate = IMask(coordinate, coordinateMask);
-const maskPhone = IMask(phone, phoneMask);
 
 // Modal window
+const phone = document.getElementById('input-phone');
 const owerlay = document.querySelector('.owerlay');
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal--close');
@@ -48,19 +33,8 @@ sendModal.addEventListener('click', () => {
 
 sendForm.addEventListener('click', (e) => {
     e.preventDefault();
-
-    if(phone.value.length == 16) {
-        id.innerText = phone.value;
-        modalForm.classList.add('hide');
-        modalInner.classList.remove('hide');
-    } else {
-        phone.style.border = '1px solid red';
-        phone.addEventListener('input', () => {
-            phone.style.border = '1px solid #3EC072';
-        });
-    }
-
     
-
-    
+    id.innerText = phone.value;
+    modalForm.classList.add('hide');
+    modalInner.classList.remove('hide');    
 });
