@@ -11,6 +11,12 @@ const sendForm = document.querySelector('.send-form');
 const coordinateBtn = document.getElementById('id-coordinates');
 const id = document.getElementById('id');
 
+function removeData() {
+    modalForm.classList.remove('hide');
+    modalInner.classList.add('hide'); 
+    phone.value = '';
+}
+ 
 coordinateBtn.addEventListener('click', function() {
     modal.classList.remove('hide');
     owerlay.classList.remove('hide');
@@ -19,22 +25,32 @@ coordinateBtn.addEventListener('click', function() {
 owerlay.addEventListener('click', function() {
     this.classList.add('hide');
     modal.classList.add('hide');
+    removeData();
 });
 
 modalClose.addEventListener('click', () => {
     owerlay.classList.add('hide');
     modal.classList.add('hide');
+    removeData(); 
 });
 
 sendModal.addEventListener('click', () => {
     owerlay.classList.add('hide');
     modal.classList.add('hide');
+    removeData();
+});
+
+phone.addEventListener('input', () => {
+    phone.style.border = '1px solid #3EC072';
 });
 
 sendForm.addEventListener('click', (e) => {
     e.preventDefault();
-    
-    id.innerText = phone.value;
-    modalForm.classList.add('hide');
-    modalInner.classList.remove('hide');    
+    if(phone.value) {
+        id.innerText = phone.value;
+        modalForm.classList.add('hide');
+        modalInner.classList.remove('hide');   
+    } else {
+        phone.style.border = '1px solid red';
+    }
 });
