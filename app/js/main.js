@@ -11,15 +11,37 @@ const sendForm = document.querySelector('.send-form');
 const coordinateBtn = document.getElementById('id-coordinates');
 const id = document.getElementById('id');
 
+const d = function() {
+    hideModal();
+    window.removeEventListener('popstate', d);
+    console.log(1);
+};
+
 function removeData() {
     modalForm.classList.remove('hide');
     modalInner.classList.add('hide'); 
     phone.value = '';
 }
- 
-coordinateBtn.addEventListener('click', function() {
+
+function showModal() {
     modal.classList.remove('hide');
     owerlay.classList.remove('hide');
+    window.removeEventListener('popstate', d);
+}
+
+function hideModal() {
+    owerlay.classList.add('hide');
+    modal.classList.add('hide');
+    window.removeEventListener('popstate', d);
+}
+
+function stateActions() {
+    window.addEventListener('popstate' , d);
+}
+
+coordinateBtn.addEventListener('click', function(e) {
+    setTimeout(stateActions, 1);
+    showModal();
 });
 
 owerlay.addEventListener('click', function() {
@@ -29,14 +51,12 @@ owerlay.addEventListener('click', function() {
 });
 
 modalClose.addEventListener('click', () => {
-    owerlay.classList.add('hide');
-    modal.classList.add('hide');
+    hideModal();
     removeData(); 
 });
 
 sendModal.addEventListener('click', () => {
-    owerlay.classList.add('hide');
-    modal.classList.add('hide');
+    hideModal();
     removeData();
 });
 
@@ -54,3 +74,4 @@ sendForm.addEventListener('click', (e) => {
         phone.style.border = '1px solid red';
     }
 });
+
