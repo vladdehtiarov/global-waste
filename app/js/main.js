@@ -1,6 +1,7 @@
 
 // Modal window
 const phone = document.getElementById('input-phone');
+const coordinate = document.getElementById('input-coordinate');
 const owerlay = document.querySelector('.owerlay');
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal--close');
@@ -21,6 +22,7 @@ function removeData() {
     modalForm.classList.remove('hide');
     modalInner.classList.add('hide'); 
     phone.value = '';
+    coordinate.value = '';
 }
 
 function showModal() {
