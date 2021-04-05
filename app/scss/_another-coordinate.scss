@@ -1,0 +1,100 @@
+.another-coordinate {
+    width: 100%;
+
+    @include responsive(mobile) {
+        padding-bottom: 52.083vw;
+    }
+
+    .text-1 {
+        width: 36.458vw;
+        text-align: justify;
+
+        @include responsive(mobile) {
+            width: 100%;
+            font-size: 4.267vw;
+        }
+
+        p {
+            text-indent: 1.2em; 
+
+            @include responsive(mobile) {
+                text-indent: 1em;
+            }
+        }   
+    }
+
+    .center-text {
+        margin-top: 2.917vw;
+        font-size: 1.875vw;
+
+        @include responsive(mobile) {
+            margin-top: 7.292vw;
+            font-size: 6.250vw;
+        }
+    }
+
+    &__text {
+        margin-top: 2.917vw;
+        font-weight: 700;
+        font-size: 1.198vw;
+        line-height: 1.406vw;
+        color: #000000;
+
+        @include responsive(mobile) {
+            margin-top: 13.021vw;
+            font-size: 3.646vw;
+            line-height: 1.2;
+        }
+    }
+
+    &__form {
+        margin-top: 0.833vw;
+
+        @include responsive(mobile) {
+            margin-top: 3.385vw;
+        }
+    }
+
+    .text-2 {
+        margin-top: 3.333vw;
+
+        @include responsive (mobile) {
+            margin-top: 13.021vw;
+            margin-bottom: 13.021vw;
+            font-size: 4.267vw;
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        width: 8.906vw;
+        height: 2.396vw;
+        margin-left: 0.833vw;
+        background: #3EC072;
+        box-shadow: 0px 0.521vw 2.604vw rgba(140, 212, 112, 0.5);
+        border-radius: 0.365vw;
+        border: none;
+        outline: none;
+
+        font-family: $fonts;
+        font-weight: 700;
+        font-size: 1.042vw;
+        line-height: 1.198vw;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-shadow: 0px 0px 0.182vw rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+
+        @include responsive(mobile) {
+            display: block;
+            width: 28.235vw;
+            height: 7.529vw;
+            margin: 0 auto;
+            margin-top: 4.688vw;
+            border-radius: 1.412vw;
+            font-size: 3.294vw;
+            line-height: 1.2;
+        }
+    }
+}

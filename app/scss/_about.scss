@@ -1,0 +1,18 @@
+// About styles
+.about {
+    @include responsive(mobile) {
+        padding-bottom: 13.333vw;
+    }
+
+    
+}
+
+.menu--link {
+    svg {
+        width: 2.500vw;
+
+        @include responsive(mobile) {
+           width: 6.417vw;
+        }
+    }
+}

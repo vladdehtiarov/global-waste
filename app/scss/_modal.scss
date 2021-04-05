@@ -115,6 +115,7 @@
         }
 
         &--sutitle {
+            margin-top: 0.417vw;
             font-weight: 700;
             font-size: 1.042vw;
             line-height: 1.198vw;
@@ -123,6 +124,7 @@
             color: #474747;
 
             @include responsive(mobile) {
+                margin-top: 0.800vw;
                 font-size: 2.353vw;
                 line-height: 1.2;
             }

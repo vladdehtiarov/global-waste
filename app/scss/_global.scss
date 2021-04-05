@@ -34,3 +34,16 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+
+
+.page-text {
+    font-size: 1.354vw;
+    line-height: 1.5;
+    text-align: justify;
+    text-indent: 1.5em; 
+
+    @include responsive(mobile) {
+        font-size: 4.267vw;
+        text-indent: 1em;
+    }
+}
