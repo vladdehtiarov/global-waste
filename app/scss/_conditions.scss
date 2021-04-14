@@ -1,0 +1,281 @@
+// Conditions styles
+.conditions {
+    padding-top: 2.813vw;
+    padding-bottom: 8.438vw;
+
+    @include responsive(mobile) {
+        padding-top: 10.156vw;
+        padding-bottom: 10.026vw;
+    }
+
+    &__inner {
+        width: 38.750vw;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 0.781vw;
+        background: #FFFFFF;
+
+        @include responsive(mobile) {
+            width: 90%;
+            border-radius: 1.953vw;
+        }
+    }
+
+    &__container {
+        width: 25.729vw;
+        height: auto;
+        padding-top: 4.427vw;
+        padding-bottom: 2.188vw;
+        margin-left: 7.031vw;
+
+        @include responsive(mobile) {
+            width: 64.323vw;
+            padding-top: 11.068vw;
+            padding-bottom: 5.469vw;
+            margin: 0 auto;
+        }
+    }
+
+    &__buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-btn {
+        font-weight: 500;
+        font-size: 1.302vw;
+        line-height: 1.510vw;
+        text-transform: uppercase;
+        color: #464646;
+        overflow: hidden;
+
+        @include responsive(mobile) {
+            font-size: 3.255vw;
+            line-height: 3.776vw;
+        }
+    }
+
+    &-btn__underline {
+        margin-top: 0.729vw;
+        width: 100%;
+        height: 0.104vw;
+        background-color: #464646;
+        transform: translateX(-100%);
+        transition: all 0.2s ease-in-out;
+
+        @include responsive(mobile) {
+            margin-top: 1.823vw;
+            height: 0.260vw;
+        }
+    }
+
+    .conditions-btn:hover {
+        .conditions-btn__underline {
+            transform: translateX(0);
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    &__text {
+        width: 19.167vw;
+        margin: 0 auto;
+        margin-top: 2.917vw;
+
+        @include responsive(mobile) {
+            width: 47.917vw;
+            margin-top: 7.422vw;
+        }
+
+        p {
+            margin-top: 1.719vw;
+            font-weight: normal;
+            font-size: 1.198vw;
+            line-height: 1.406vw;
+            text-indent: 1.146vw;
+            text-align: justify;
+            color: #000000;
+
+            @include responsive(mobile) {
+                margin-top: 4.297vw;
+                font-size: 2.995vw;
+                line-height: 3.516vw;
+                text-indent: 3.385vw;
+            }
+        }
+
+        P:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__form {
+        margin-top: 3.906vw;
+
+        @include responsive(mobile) {
+            margin-top: 9.375vw;
+        }
+
+        .input-label {
+            margin-bottom: 0;
+            font-weight: bold;
+            font-size: 0.938vw;
+            line-height: 1.094vw;
+            color: #000000;
+
+            @include responsive(mobile) {
+                font-size: 2.344vw;
+                line-height: 2.734vw;
+            }
+        }
+
+        .form--input {
+            margin-top: 0.625vw;
+
+            @include responsive(mobile) {
+                margin-top: 2.344vw;
+            }
+        }
+
+    }
+}
+
+#coditions-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.302vw;
+    width: 8.281vw;
+    height: 2.240vw;
+    background: #3EC072;
+    box-shadow: 0px 0.469vw 2.396vw rgba(140, 212, 112, 0.5);
+    border-radius: 0.313vw;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    font-size: 0.990vw;
+    line-height: 1.146vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 0.156vw rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+
+    @include responsive(mobile) {
+        width: 20.703vw;
+        height: 5.599vw;
+        margin-top: 3.125vw;
+        box-shadow: 0px 1.172vw 5.990vw rgba(140, 212, 112, 0.5);
+        border-radius: 0.781vw;
+        font-size: 2.474vw;
+        line-height: 2.865vw;
+        text-shadow: 0px 0px 0.391vw rgba(0, 0, 0, 0.25);
+    }
+}
+
+// Reward content
+.reward__content {
+    margin: 0 auto;
+    margin-top: 5.573vw;
+
+    @include responsive(mobile) {
+        margin-top: 13.932vw;
+    }
+}
+
+.reward-title {
+    font-weight: bold;
+    font-size: 1.302vw;
+    line-height: 1.510vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+
+    @include responsive(mobile) {
+        font-size: 3.255vw;
+        line-height: 3.776vw;
+    }
+}
+
+.reward-list {
+    text-align: center;
+    margin-top: 2.344vw;
+
+    @include responsive(mobile) {
+        margin-top: 5.859vw;
+    }
+}
+
+.reward-item {
+    font-size: 1.042vw;
+    line-height: 1.198vw;
+    color: #000000;
+
+    @include responsive(mobile) {
+        font-size: 2.604vw;
+        line-height: 2.995vw;
+    }
+}
+
+.reward-points {
+    margin-top: 9.635vw;
+    margin-right: -3.333vw;
+    margin-left: auto;
+    padding-bottom: 2.083vw;
+    font-weight: 700;
+    font-size: 1.302vw;
+    line-height: 1.302vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #3EC072;
+    text-align: right;
+
+    @include responsive(mobile) {
+       font-size: 3.255vw;
+       line-height: 3.776vw;
+    }
+    
+    span {
+        font-weight: 400;
+    }
+}
+
+// Modal window
+.conditions-modal {
+    height: auto;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .modal--close {
+        top: 2.240vw;
+        right: 2.135vw;
+
+        @include responsive(mobile) {
+            top: 2.604vw;
+            right: 2.604vw;
+        }
+    }
+    
+    p {
+        width: 25.729vw;
+        margin: 0 auto;
+        padding-top: 9.896vw;
+        padding-bottom: 11.250vw;
+        font-weight: bold;
+        font-size: 1.302vw;
+        line-height: 1.510vw;
+        text-align: center;
+        color: #3EC072;
+
+        @include responsive(mobile) {
+            width: 64.323vw;
+            padding-top: 24.740vw;
+            padding-bottom: 28.125vw;
+            font-size: 3.255vw;
+            line-height: 3.776vw;
+        }
+    }
+
+}

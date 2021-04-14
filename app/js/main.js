@@ -6,6 +6,15 @@ const reward = document.querySelector('.reward');
 const sendId = document.querySelector('.send-id');
 const phoneId = document.getElementById('input-phone-id');
 const sendModal = document.querySelector('.send-modal');
+const conditions = document.querySelector('.conditions');
+const conditionsModal = document.querySelector('.conditions-modal');
+const coditionsInput = document.querySelector('#coditions-input');
+const coditionsBtn = document.querySelector('#coditions-btn');
+const modalCl = document.querySelector('.modal--close');
+const conditionsBtn = document.querySelector('#conditions-btn');
+const rewardsBtn = document.querySelector('#rewards-btn');
+const conditionsContent = document.querySelector('.conditions__content');
+const rewardContent = document.querySelector('.reward__content');
 
 
 
@@ -18,10 +27,36 @@ if (reward) {
 
 if (sendModal) {
     sendModal.addEventListener('click', () => {
-        document.location.href = "another-coordinate.html";
+        document.location.href = "conditions.html";
     });
     
 }
+
+if (conditions) {
+    coditionsBtn.addEventListener('click', (event) => {
+        conditions.classList.add('hide');
+        conditionsModal.classList.remove('hide');
+    });
+
+    modalCl.addEventListener('click', () => {
+        conditions.classList.remove('hide');
+        conditionsModal.classList.add('hide');
+    });
+
+    conditionsBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        rewardContent.classList.add('hide');
+        conditionsContent.classList.remove('hide');
+    });
+
+    rewardsBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        rewardContent.classList.remove('hide');
+        conditionsContent.classList.add('hide');
+    });
+}
+
+
 
 
 // Modal window

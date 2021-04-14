@@ -10,4 +10,40 @@
     @include responsive(mobile) {
         padding: 6.588vw 0;
     }
+
+    &__inner {
+        width: 90%;
+        max-width: 52.396vw;
+        margin: 0 auto;
+        padding: 1.458vw 0;
+    }
+
+    &__back-btn {
+        display: inline-block;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-weight: 500;
+            font-size: 1.302vw;
+            line-height: 1.510vw;
+            color: #464646;
+
+            @include responsive(mobile) {
+                font-size: 3.255vw;
+                line-height: 3.776vw;
+            }
+
+            img {
+                width: 1.146vw;
+                margin-right: 0.417vw;
+
+                @include responsive(mobile) {
+                    width: 2.865vw;
+                    margin-right: 1.042vw;
+                }
+            }
+        }   
+    }
 }
