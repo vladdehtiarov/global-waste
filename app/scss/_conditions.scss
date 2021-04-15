@@ -4,7 +4,7 @@
     padding-bottom: 8.438vw;
 
     @include responsive(mobile) {
-        padding-top: 10.156vw;
+        padding-top: 0;
         padding-bottom: 10.026vw;
     }
 
@@ -13,7 +13,7 @@
         height: auto;
         margin: 0 auto;
         border-radius: 0.781vw;
-        background: #FFFFFF;
+        background: transparent;
 
         @include responsive(mobile) {
             width: 90%;
@@ -30,7 +30,7 @@
 
         @include responsive(mobile) {
             width: 64.323vw;
-            padding-top: 11.068vw;
+            padding-top: 5vw;
             padding-bottom: 5.469vw;
             margin: 0 auto;
         }
@@ -52,7 +52,7 @@
         overflow: hidden;
 
         @include responsive(mobile) {
-            font-size: 3.255vw;
+            font-size: 3.906vw;
             line-height: 3.776vw;
         }
     }
@@ -79,12 +79,12 @@
     }
 
     &__text {
-        width: 19.167vw;
+        width: 100%;
         margin: 0 auto;
         margin-top: 2.917vw;
 
         @include responsive(mobile) {
-            width: 47.917vw;
+            width: 100%;
             margin-top: 7.422vw;
         }
 
@@ -99,8 +99,8 @@
 
             @include responsive(mobile) {
                 margin-top: 4.297vw;
-                font-size: 2.995vw;
-                line-height: 3.516vw;
+                font-size: 3.646vw;
+                line-height: 1.2;
                 text-indent: 3.385vw;
             }
         }
@@ -117,7 +117,21 @@
             margin-top: 9.375vw;
         }
 
+        .form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        label {
+            @include responsive(mobile) {
+                width: 100%;
+            }
+        }
+
         .input-label {
+            width: 131%;
             margin-bottom: 0;
             font-weight: bold;
             font-size: 0.938vw;
@@ -125,6 +139,7 @@
             color: #000000;
 
             @include responsive(mobile) {
+                width: 132%;
                 font-size: 2.344vw;
                 line-height: 2.734vw;
             }
@@ -132,8 +147,10 @@
 
         .form--input {
             margin-top: 0.625vw;
+            width: 90%;
 
             @include responsive(mobile) {
+                width: 90%;
                 margin-top: 2.344vw;
             }
         }
@@ -145,7 +162,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.302vw;
+    margin-top: 1.667vw;
     width: 8.281vw;
     height: 2.240vw;
     background: #3EC072;
@@ -165,7 +182,7 @@
     @include responsive(mobile) {
         width: 20.703vw;
         height: 5.599vw;
-        margin-top: 3.125vw;
+        margin-top: 1.823vw;
         box-shadow: 0px 1.172vw 5.990vw rgba(140, 212, 112, 0.5);
         border-radius: 0.781vw;
         font-size: 2.474vw;
@@ -193,7 +210,7 @@
     color: #000000;
 
     @include responsive(mobile) {
-        font-size: 3.255vw;
+        font-size: 3.646vw;
         line-height: 3.776vw;
     }
 }
@@ -213,8 +230,8 @@
     color: #000000;
 
     @include responsive(mobile) {
-        font-size: 2.604vw;
-        line-height: 2.995vw;
+        font-size: 3.385vw;
+        line-height: 1.4;
     }
 }
 
