@@ -131,7 +131,8 @@
         }
     }
 
-    .send-modal {
+    .send-modal,
+    .send-id {
         margin-top: 5.990vw;
         width: 8.906vw;
         height: 2.396vw;
@@ -162,6 +163,30 @@
             line-height: 1.2;
         }
     }
+}
+
+.form-enter {
+    .send-form {
+        order: 2;
+    }
+
+    label:nth-child(1) {
+        order: 1;
+        margin-top: 3.021vw;
+
+        @include responsive(mobile) {
+            margin-top: 8vw;
+        }
+    }
+
+    label:nth-child(2) {
+        margin-top: 0;
+        order: 0;
+
+        @include responsive(mobile) {
+            margin-top: 0;
+        }
+    } 
 }
 
 .form {
@@ -258,4 +283,55 @@
 
 .hide {
     display: none;
+}
+
+.form--input.false-value {
+    border: 0.052vw solid red;
+}
+
+#input-message {
+    padding-top: 0.8vw;
+    height: 7.813vw;
+
+    @include responsive(mobile) {
+        height: 28vw;
+        padding-top: 3vw;
+    }
+}
+
+.section-text {
+    width: 100%;
+    height: 3.646vw;
+    position: relative;
+    font-size: 1.354vw;
+
+    @include responsive(mobile) {
+        height: 9.115vw;
+        font-size: 3.385vw;
+    }
+
+    &__inner {
+        width: 23vw;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-58%);
+
+        @include responsive(mobile) {
+            width: 54.948vw;
+            transform: translateX(-65%);
+        }
+        
+        span:first-child {
+            // margin-bottom: 0.625vw;
+            text-transform: capitalize;
+
+            @include responsive(mobile) {
+                margin-bottom: 1.563vw;
+            }
+        } 
+    }
 }

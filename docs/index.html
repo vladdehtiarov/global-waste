@@ -14,7 +14,7 @@
                 <nav class="menu--wrapper">
                     <ul class="menu--list">
                         <li class="menu--item"><a href="about.html" class="menu--link">About</a></li>
-                        <li class="menu--item"><a href="#" class="menu--link">Contacts</a></li>
+                        <li class="menu--item"><a href="contacts.html" class="menu--link">Contacts</a></li>
                     </ul>
                 </nav>
             </div>
@@ -28,7 +28,7 @@
                     Global waste collection organisation
                 </h1>
                 <p class="subitle">
-                    Headquarters Netherland,  address ... st...
+                    26 Hatton Garden London EC1N 8BR
                 </p>
             </div>
 
@@ -44,27 +44,27 @@
             </div>
             
             <div class="map">
-                <img src="images/map.svg" alt="map">
+                <img src="../images/map.svg" alt="map">
             </div>
         </section>
     </main>
 
     <div class="owerlay hide"></div>
-    <div class="modal hide">
-        <form class="form">
+    <div class="modal hidform-entere hide">
+        <form class="form form-enter">
             <label>
                 <p class="input-label">Enter Google Maps GPS coordinates</p>
                 <input class="form--input" id="input-coordinate" type="text" placeholder="00.0000000, 00.0000000">
             </label>
             <label>
-                <p class="input-label">Enter phone number</p>
-                <input class="form--input" id="input-phone" type="text" placeholder="(XXX)-XXX-XXXX">
+                <p class="input-label">Enter phone number. It will be your ID</p>
+                <input class="form--input" id="input-phone" type="number" placeholder="(XXX)-XXX-XXXX">
             </label>
             <button class="send-form">send</button>
         </form>
         <div class="modal--inner hide">
             <a class="modal--close">
-                <img src="images/close.svg" alt="x">
+                <img src="../images/close.svg" alt="x">
             </a>
             <div class="modal--inner__id-block">
                 <h2 class="id-block--title">YOUR ID</h2>
@@ -84,9 +84,9 @@
         <form class="form">
             <label>
                 <p class="input-label">Enter your ID, please, phone number</p>
-                <input class="form--input" id="input-phone-id" type="text" placeholder="(XXX)-XXX-XXXX">
+                <input class="form--input" id="input-phone-id" type="number" placeholder="(XXX)-XXX-XXXX">
             </label>
-            <button class="send-form send-id">send</button>
+            <button class="send-id">send</button>
         </form>
     </div>
 

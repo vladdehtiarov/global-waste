@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<style>
+    .mess {
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 768px) {
+        .mess {
+            width: 70%;
+            font-size: 12px;
+            line-height: 1.5;
+    }
+    }
+
+
+</style>
+<body>
+    <header class="header">
+        <div class="header__inner" id="header-cntacts">
+            <div class="header__back-btn">
+                <a href="index.php">
+                    <img src="images/back.svg" alt="<">
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main">
+        <div class="section-text">
+            <div class="section-text__inner">
+                <span>
+                    Global waste collection organisation
+                </span>
+                <span>
+                    26 Hatton Garden,<br> London EC1N 8BR
+                </span>
+            </div>
+        </div>
+        <div class="contacts-wrapp">
+            <form class="form form-enter formone" style="margin-top: 3vw;" method="POST" id="formone">
+                <label>
+                    <p class="input-label">Message</p>
+                    <textarea class="form--input"  name="message" id="input-message" name="message" required placeholder="Write your message"></textarea>
+                </label>
+                <label>
+                    <p class="input-label">Contacts</p>
+                    <input class="form--input" id="input-contacts" type="text" name="contact" required placeholder="Write your contacts">
+                </label>
+                <button class="send-form" type="submit">send</button>
+            </form>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+    $(".formone").submit(function () {
+        // Получение ID формы
+        var formID = $(this).attr('id');
+        // Добавление решётки к имени ID
+        var formNm = $('#' + formID);
+        $.ajax({
+            type: "POST",
+            url: '/postcont.php',
+            data: formNm.serialize(),
+            beforeSend: function () {
+                // Вывод текста в процессе отправки
+                $(formNm).html('<p style="text-align:center">Send...</p>');
+            },
+            success: function (data) {
+                // Вывод текста результата отправки
+                // $(formNm).html(data);
+                $(formNm).html('<p class="mess">Your message has been sent, we will answer you as soon as possible</p>');
+
+                // setTimeout(addMess, 5000);
+
+                window.addEventListener('click', () => $(formNm).html(data));
+
+            },
+            error: function (jqXHR, text, error) {
+                // Вывод текста ошибки отправки
+                $(formNm).html(error);
+            }
+        });
+        return false;
+    });
+});
+</script>
+    
+</body>
+</html>

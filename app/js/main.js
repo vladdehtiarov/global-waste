@@ -3,7 +3,6 @@
 
 const rewardList = document.querySelector('.reward-list');
 const reward = document.querySelector('.reward');
-const sendId = document.querySelector('.send-id');
 const phoneId = document.getElementById('input-phone-id');
 const sendModal = document.querySelector('.send-modal');
 const conditions = document.querySelector('.conditions');
@@ -15,6 +14,10 @@ const conditionsBtn = document.querySelector('#conditions-btn');
 const rewardsBtn = document.querySelector('#rewards-btn');
 const conditionsContent = document.querySelector('.conditions__content');
 const rewardContent = document.querySelector('.reward__content');
+const phoneIdInp = document.querySelector('#input-phone-id');
+const sendId = document.querySelector('.send-id');
+const conditionsId = document.querySelector('#conditions-id');
+const headerID = document.querySelector('.header__id');
 
 
 
@@ -25,17 +28,33 @@ if (reward) {
 }
 
 
-if (sendModal) {
-    sendModal.addEventListener('click', () => {
-        document.location.href = "conditions.html";
+if (sendId) {
+    sendId.addEventListener('click', (e) => {
+        e.preventDefault();
+        // document.location.href = "conditions.html";
+        falseValue(phoneIdInp);
+
     });
     
+}
+
+function falseValue(elem) {
+    elem.classList.add('false-value');
+    elem.placeholder = 'Not correct entry';
+
+    setTimeout(ret, 1500);
+
+    function ret() {
+        elem.classList.remove('false-value');
+        elem.placeholder = '+_____ _ ______';  
+    }
 }
 
 if (conditions) {
     coditionsBtn.addEventListener('click', (event) => {
         conditions.classList.add('hide');
         conditionsModal.classList.remove('hide');
+        
     });
 
     modalCl.addEventListener('click', () => {
@@ -47,12 +66,20 @@ if (conditions) {
         e.preventDefault();
         rewardContent.classList.add('hide');
         conditionsContent.classList.remove('hide');
+        headerID.classList.remove('hide');
+        conditionsBtn.classList.add('conditions-btn_active');
+        rewardsBtn.classList.remove('conditions-btn_active');
+        console.log(1)
     });
 
     rewardsBtn.addEventListener('click', (e) => {
         e.preventDefault();
         rewardContent.classList.remove('hide');
         conditionsContent.classList.add('hide');
+        headerID.classList.add('hide');
+        conditionsBtn.classList.remove('conditions-btn_active');
+        rewardsBtn.classList.add('conditions-btn_active');
+        console.log(2)
     });
 }
 
